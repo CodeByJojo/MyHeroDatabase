@@ -22,13 +22,24 @@
 /*******************************************/
 
 body {
-  background: rgb(95, 173, 236);
+  background-color: rgb(95, 173, 236);
   text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  background-position: 60% 60%;
 }
 
 h1 {
   font-family: 'Anton', sans-serif;
   font-size: 3rem;
+}
+
+main {
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+  max-width: 60%;
+  margin: 0 auto;
 }
 
 
