@@ -84,7 +84,7 @@ MongoClient.connect('mongodb+srv://joe:maltba92@cluster0.cbzozx4.mongodb.net/?re
 
 
          
-         app.listen(3001, (req, res) => {
+         app.listen(process.env.PORT || 5000, (req, res) => {
              console.log('The server is running bro')
          })
     })
