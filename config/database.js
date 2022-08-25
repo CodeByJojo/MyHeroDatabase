@@ -5,14 +5,14 @@ const connectDB = async () => {
         const conn = await mongoose.connect(process.env.DB_STRING, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
-            useFindAndModify: false,
+            // useFindAndModify: false,
         })
 
-        console.log(`Your MongoDB is Connected! ${conn.connection.host}`)
+        console.log(`Your MongoDB is Connected!`)
     } catch (err) {
         console.error(err)
         process.exit(1)
     }
 }
 
-module.exports = connectDB
+module.exports = connectDB 
