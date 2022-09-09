@@ -1,5 +1,5 @@
 module.exports = {
-    getIndex: (req,res)=>{
+    getLogin: (req,res)=>{
         res.render('login.ejs')
     }
 }

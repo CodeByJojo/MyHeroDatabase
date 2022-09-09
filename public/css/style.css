@@ -35,13 +35,13 @@ body {
 
 h1 {
   font-family: 'Anton', sans-serif;
-  font-size: 3rem;
+  font-size: 6rem;
   display: inline;
   margin: 0 55px;
 }
 
 main {
-  background-color: bisque;
+  
   display: flex;
   justify-content: center;
   max-width: 60%;
@@ -61,6 +61,11 @@ button {
   margin-top: 50px;
 }
 
+input {
+  font-size: 2rem;
+  text-align: center;
+}
+
 
 
 
@@ -72,5 +77,11 @@ button {
 
 
 /******************************************
-/* ADDITIONAL STYLES
+/* PHONE SIZES
 /*******************************************/
+@media screen and (max-width: 1900px) {
+  h1 {
+    margin: 0 0;
+    font-size: 5rem;
+  }
+}
