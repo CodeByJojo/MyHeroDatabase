@@ -26,7 +26,8 @@ html {
 /*******************************************/
 
 body {
-  background-color: rgb(95, 173, 236);
+  /* background-color: rgb(95, 173, 236); */
+  background-color: #52b2e9;
   text-align: center;
   width: 60%;
   margin: 0 auto;
@@ -64,6 +65,10 @@ button {
 input {
   font-size: 2rem;
   text-align: center;
+}
+
+.makeGreen {
+  color: forestgreen;
 }
 
 

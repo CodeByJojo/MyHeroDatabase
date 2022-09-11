@@ -16,7 +16,7 @@
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
-		<link rel="shortcut icon" href="#" type="image/x-icon"/>
+		<link rel="shortcut icon" href="resources/favicon.ico" type="image/x-icon"/>
 	</head>
 	<body>
 		<header>
@@ -27,8 +27,7 @@
 		</header>
 
 		<main>
-			<!-- <form action="/myHeroForm" method="post"> -->
-				<!-- <input type="image" name="pic" placeholder="Pic"> -->
+			<form action="/hero/createHero" method="post">
 				<input type="text" name="name" placeholder="Name">
 				<input type="text" name="heroName" placeholder="Hero Name">
 				<input type="text" name="quirk" placeholder="Quirk">
@@ -37,6 +36,18 @@
 			</form>
 		</main>
 
+		<section id="list">
+			<ul class="heroes">
+				<% hero.forEach( el => { %>
+					<li class='heroItem' data-id='<%=el._id%>'>
+						<span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+						<span class='del'> Delete </span>
+					</li>
+			<% }) %> 
+			</ul>
+					
+		</section>
+
 		
 
 
@@ -44,7 +55,7 @@
 
 
 		
-		<script src="/main.js"></script>
+		<!-- <script src="/main.js"></script> -->
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>

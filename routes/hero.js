@@ -5,6 +5,8 @@ const { ensureAuth } = require('../middleware/auth')
 
 router.get('/', heroController.getHero)
 
+router.post('/createHero', heroController.createHero)
+
 
 
 
