@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>My Hero Database</title>
+
+		<meta charset="utf-8">
+		<meta name="description" content="Your description goes here">
+		<meta name="keywords" content="one, two, three">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="shortcut icon" href="resources/favicon.ico" type="image/x-icon"/>
+	</head>
+	<body>
+		<header>
+			<img src="resources/All_Might.png">
+			<h1>My Hero Database</h1>
+			<img src="resources/Deku.png">
+			<h3>Enter New Hero Below</h3>
+		</header>
+
+		<main>
+			<form action="/hero/createHero" method="post">
+				<input type="text" name="name" placeholder="Name">
+				<input type="text" name="heroName" placeholder="Hero Name">
+				<input type="text" name="quirk" placeholder="Quirk">
+				<input type="text" name="age" placeholder="Age">
+				<button type="submit">Submit</button>
+			</form>
+		</main>
+
+		<section id="list">
+			<ul class="heroes">
+				<% hero.forEach( el => { %>
+					<li class='heroItem' data-id='<%=el._id%>'>
+						<!-- <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span> -->
+						<span class='del'> Delete </span>
+					</li>
+			<% }) %> 
+			</ul>
+					
+		</section>
+
+		
+
+
+
+
+
+		
+		<!-- <script src="/main.js"></script> -->
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
