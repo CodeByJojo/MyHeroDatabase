@@ -1,23 +1,23 @@
-const HeroDB = require('../models/Hero')
+const Hero = require('../models/Hero') // you just changed HeroDB to Hero
 
 module.exports = {
     getHeroes: async (req, res)=>{
         try{
-            const heroItems = await HeroDB.find()
-            res.render('heroes.ejs', {hero: heroItems})
+            const heroItems = await Hero.find()  // did the same here
+            res.render('heroes.ejs', {heroes: heroItems})
         }catch(err){
             console.log(err)
         }
     },
     createHero: async (req, res)=>{
         try{
-            await HeroDB.create({hero: req.body.heroItems})
+            await Hero.create({hero: req.body.name})  // and here also changed heroItems
             console.log('A Hero has been born!')
-            res.redirect('/heroes') // doublecheck to make sure the url will be this or hero
+            res.redirect('/heroes') 
         }catch(err) {
             console.log(err)
         }
     },
 }
 
-//---------------------COME BACK AND ADD DELETE 4 50
+//---------------------COME BACK AND ADD DELETE

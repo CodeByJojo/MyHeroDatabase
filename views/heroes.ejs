@@ -27,20 +27,20 @@
 		</header>
 
 		<main>
-			<form action="/hero/createHero" method="post">
-				<input type="text" name="name" placeholder="Name">
-				<input type="text" name="heroName" placeholder="Hero Name">
+			<form action="/heroes/createHero" method="POST">
+				<input type="text" name="hero" placeholder="Name"> <!-- Changed name to heroItem -->
+				<!-- <input type="text" name="heroName" placeholder="Hero Name">
 				<input type="text" name="quirk" placeholder="Quirk">
-				<input type="text" name="age" placeholder="Age">
+				<input type="text" name="age" placeholder="Age"> -->
 				<button type="submit">Submit</button>
+				
 			</form>
 		</main>
 
 		<section id="list">
 			<ul class="heroes">
-				<% hero.forEach( el => { %>
+				<% heroes.forEach( el => { %>
 					<li class='heroItem' data-id='<%=el._id%>'>
-						<!-- <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span> -->
 						<span class='del'> Delete </span>
 					</li>
 			<% }) %> 
