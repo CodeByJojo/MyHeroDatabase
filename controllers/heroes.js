@@ -1,23 +1,29 @@
-const Hero = require('../models/Hero') // you just changed HeroDB to Hero
+const Hero = require('../models/Hero')
 
 module.exports = {
     getHeroes: async (req, res)=>{
         try{
-            const heroItems = await Hero.find()  // did the same here
-            res.render('heroes.ejs', {heroes: heroItems})
+            const heroItems = await Hero.find()
+            res.render('heroes.ejs', {heroes: heroItems} )   
         }catch(err){
             console.log(err)
         }
     },
-    createHero: async (req, res)=>{
+    createHero: async (req, res)=> {
         try{
-            await Hero.create({hero: req.body.name})  // and here also changed heroItems
-            console.log('A Hero has been born!')
-            res.redirect('/heroes') 
-        }catch(err) {
+            await Hero.create({
+                name: req.body.name,
+                heroName: req.body.heroName,
+                quirk: req.body.quirk,
+                age: req.body.age,})
+                
+            console.log('A hero has been born!')
+            res.redirect('/heroes')
+        }catch(err){
             console.log(err)
+            console.log('This is an error')
         }
     },
-}
 
-//---------------------COME BACK AND ADD DELETE
+    // Add Delete Here
+}

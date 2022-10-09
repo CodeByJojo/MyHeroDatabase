@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const connectDB = require('./config/database')
 const homeRoutes = require('./routes/home')
-const heroesRoutes = require('./routes/heroes')
+const heroRoutes = require('./routes/heroes')
 
 require('dotenv').config({path: './config/.env'})
 
@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true}))
 app.use(express.json())
 
 app.use('/', homeRoutes)
-app.use('/heroes', heroesRoutes)
+app.use('/heroes', heroRoutes)
 
 app.listen(process.env.PORT, ()=>{
     console.log('Server is up and running!')

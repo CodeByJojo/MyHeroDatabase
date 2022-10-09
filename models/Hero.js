@@ -5,18 +5,18 @@ const HeroSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    // heroName: {
-    //     type: String,
-    //     required: true,
-    // },
-    // quirk: {
-    //     type: String,
-    //     required: true,
-    // },
-    // age: {
-    //     type: Number,
-    //     required: true,
-    // }
+    heroName: {
+        type: String,
+        required: true,
+    },
+    quirk: {
+        type: String,
+        required: true,
+    },
+    age: {
+        type: String,
+        required: true,
+    }
 })
 
-module.exports = mongoose.model('Hero', HeroSchema)  // it might not be the DB here
+module.exports = mongoose.model('Hero', HeroSchema, 'heroes')
