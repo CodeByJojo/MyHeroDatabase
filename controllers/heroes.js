@@ -26,4 +26,16 @@ module.exports = {
     },
 
     // Add Delete Here
+
+    deleteHero: async (req, res)=>{
+        console.log(req.body.heroIdFromJSFile)
+        try{
+            await Hero.findOneAndDelete({_id:req.body.heroIdFromJSFile})
+            console.log('Hero Deleted')
+            res.json('Deleted It')
+        }catch(err){
+            console.log(err)
+        }
+    }
+
 }

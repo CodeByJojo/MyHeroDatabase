@@ -37,12 +37,15 @@
             </form>
         </main>
 
+        <hr>
+
         <section id="list">
             <ul class="heroes">
                 <% heroes.forEach( el => { %>
                 <li class="heroItem" data-id="<%=el._id%>">
                     <span> <%= el.name %> <%= el.heroName %> <%= el.quirk %> <%= el.age %> </span>
-                    <span class="del">Delete</span>
+                    <button class="del">Delete</button>
+                    
                 </li>
             <% }) %>
             </ul>

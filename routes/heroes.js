@@ -8,4 +8,6 @@ router.post('/createHero', heroesController.createHero)
 
 //--------------COME BACK TO ADD DELETE
 
+router.delete('/deleteHero', heroesController.deleteHero)
+
 module.exports = router
