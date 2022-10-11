@@ -60,6 +60,7 @@ img {
 button {
   font-size: 3rem;
   font-family: 'Anton', sans-serif;
+  margin-top: 1rem;
 }
 
 .clickToEnter {
@@ -73,6 +74,10 @@ input {
 
 .makeGreen {
   color: forestgreen;
+}
+
+ul {
+  list-style: none;
 }
 
 
