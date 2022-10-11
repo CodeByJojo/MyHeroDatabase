@@ -111,3 +111,9 @@ hr {
     font-size: 5rem;
   }
 }
+
+@media screen and (max-width: 2300px) {
+  h1 {
+    color: rgb(131, 11, 11);
+  }
+}
