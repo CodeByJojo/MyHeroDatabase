@@ -29,10 +29,16 @@
 
         <main>
             <form action="/heroes/createHero" method="POST">
-                <input type="text" name="name" placeholder="Name">
-                <input type="text" name="heroName" placeholder="Hero Name">
-                <input type="text" name="quirk" placeholder="Quirk">
-                <input type="text" name="age" placeholder="Age">
+
+                <div class = 'row'>
+
+                    <div class="column"> <input type="text" name="name" placeholder="Name"> </div>
+                    <div class="column"> <input type="text" name="heroName" placeholder="Hero Name"> </div>
+                    <div class="column"> <input type="text" name="quirk" placeholder="Quirk"> </div>
+                    <div class="column"> <input type="text" name="age" placeholder="Age"> </div>
+
+                </div>
+
                 <button type="submit">Submit</button>
             </form>
         </main>
@@ -43,9 +49,12 @@
             <ul class="heroes">
                 <% heroes.forEach( el => { %>
                 <li class="heroItem" data-id="<%=el._id%>">
-                    <span> <%= el.name %> <%= el.heroName %> <%= el.quirk %> <%= el.age %> </span>
+
+                
+                    <span> &#x2022; <%= el.name %> | <%= el.heroName %> | <%= el.quirk %> | <%= el.age %> </span>
                     <button class="del">Delete</button>
-                    
+
+                
                 </li>
             <% }) %>
             </ul>

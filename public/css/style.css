@@ -92,12 +92,29 @@ hr {
   
 }
 
+input {
+  border-style: hidden;
+  border-radius: 5px;
+}
+
 
 
 
 /******************************************
-/* LAYOUT
+/* GRID
 /*******************************************/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
 
 
 
@@ -113,7 +130,37 @@ hr {
 }
 
 @media screen and (max-width: 2300px) {
-  h1 {
-    color: rgb(131, 11, 11);
+ 
+
+  .column {
+    flex: 100%;
+    max-width: 100%;
+    margin: 3px 0;
+    
   }
+}
+
+@media screen and (max-width: 1280px) {
+ header img {
+  width: 10%;
+}
+
+#intro img {
+  width: 10%
+}
+
+  header {
+    margin-top: 30px;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+ 
+
+
 }
