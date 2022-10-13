@@ -97,6 +97,26 @@ input {
   border-radius: 5px;
 }
 
+ .login {
+  margin-top: 200px;
+ 
+}
+
+a {
+  text-decoration: none;
+}
+
+.email, .sign {
+  margin-top: 100px;
+}
+
+.out {
+  margin-top: 20px;
+}
+
+.user {
+  margin-top: 200px;
+}
 
 
 

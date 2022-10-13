@@ -16,6 +16,10 @@ const HeroSchema = new mongoose.Schema({
     age: {
         type: String,
         required: true,
+    }, 
+    userId: {
+        type: String,
+        required: true
     }
 })
 

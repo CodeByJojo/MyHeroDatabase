@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>My Hero Database</title>
+		<title>Login</title>
 
 		<meta charset="utf-8">
 		<meta name="description" content="Your description goes here">
@@ -20,25 +20,28 @@
 	</head>
 	<body>
 		<div id="intro">
-			<h2>Welcome to the....</h2>
+			
 			<img src="resources/All_Might.png">
 			<h1>My Hero Database</h1>
 			<img src="resources/Deku.png">
-			<h2 class="clickToEnter">Click Below To Enter</h2>
-			<a href="/heroes">
-				<button type="button">Enter</button>
-			</a>
 		</div>
-
-		<div class="login">
-			<a href="/login">
-				<button type="button">Login</button>
-			</a>
-			
-			<a href="/signup">
-				<button type="button">Signup</button>
-			</a>
-		</div>
+		<div class="email">
+            <% if (locals.messages.errors) { %>
+                <% messages.errors.forEach( el => { %>
+                    <div class="alert alert-danger"><%= el.msg %></div>
+                <% }) %>    
+            <% } %>
+            <% if (locals.messages.info) { %>
+                <% messages.info.forEach( el => { %>
+                    <div class="alert alert-danger"><%= el.msg %></div>
+                <% }) %>    
+            <% } %>
+            <form action="/login" method="POST">
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="password" placeholder="Password">
+                <input type="submit">
+            </form>
+        </div>
 
 
 
