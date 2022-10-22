@@ -98,7 +98,7 @@ input {
 }
 
  .login {
-  margin-top: 200px;
+  margin-top: 10px;
  
 }
 
@@ -107,7 +107,7 @@ a {
 }
 
 .email, .sign {
-  margin-top: 100px;
+  margin-top: 10px;
 }
 
 .out {
@@ -116,6 +116,14 @@ a {
 
 .user {
   margin-top: 200px;
+}
+
+#intro {
+  margin-top: 30px;
+}
+
+.logh1 {
+  margin-top: 100px;
 }
 
 
