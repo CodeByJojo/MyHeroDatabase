@@ -41,11 +41,16 @@
                     <div class="alert alert-danger"><%= el.msg %></div>
                 <% }) %>    
             <% } %>
-            <form action="/login" method="POST">
-                <input type="email" name="email" placeholder="Email">
-                <input type="password" name="password" placeholder="Password">
-                <button type="submit">Submit</button>
-            </form>
+
+			
+				<form action="/login" method="POST">
+					<input class="logForm" type="email" name="email" placeholder="Email">
+					<input class="logForm" type="password" name="password" placeholder="Password">
+					<div class="boxLog">
+					<button type="submit">Submit</button>
+				</div>
+				</form>
+			
         </div>
 
 

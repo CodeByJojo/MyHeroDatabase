@@ -1,6 +1,6 @@
 /* Box Model Hack */
 * {
-  box-sizing: border-box;
+  boxLog-sizing: border-boxLog;
 }
 
 /* Clear fix hack */
@@ -124,6 +124,25 @@ a {
 
 .logh1 {
   margin-top: 100px;
+}
+
+.logForm {
+  height: 35px;
+  
+}
+
+.userLog {
+  display: flex;
+  justify-content: right;
+}
+
+.user {
+  display: inline;
+  font-size: 2rem;
+}
+
+.userLog button {
+  font-size: 2rem;
 }
 
 
