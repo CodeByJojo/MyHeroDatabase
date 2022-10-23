@@ -145,6 +145,11 @@ a {
   font-size: 2rem;
 }
 
+.copyright {
+  display: flex;
+  justify-content: baseline;
+  margin-top: 200px;
+}
 
 
 /******************************************
@@ -162,6 +167,13 @@ a {
   padding: 0 4px;
 }
 
+.column {
+  flex: 100%;
+  max-width: 100%;
+  margin: 3px 0;
+  
+}
+
 
 
 
@@ -174,6 +186,8 @@ a {
     margin: 0 0;
     font-size: 5rem;
   }
+
+  
 }
 
 @media screen and (max-width: 2300px) {
